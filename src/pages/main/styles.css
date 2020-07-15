@@ -1,0 +1,41 @@
+.itens-list {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.itens-list article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.itens-list article p {
+    font-size: 16px;
+    color: #999;
+    margin-top: 5px;
+    line-height: 24px;
+}
+
+.itens-list article a{
+    height: 42px;
+    border-radius: 10px;
+    border: 2px solid #38d7e7;
+    background: none;
+    margin-top: 10px;
+    color: #38d7e7;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.itens-list article a:hover{
+    background: #38d7e7;
+    color: #fff;
+}
