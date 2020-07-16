@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import api from '../../services/api'
 import './styles.css'
 
@@ -28,7 +29,7 @@ export default class Main extends Component {
                     <strong>{item.uf}</strong>
                     <p>{item.state}</p>
                     
-                    <a href="">Mostrar</a>
+                    <Link to="">Mostrar</Link>
 
 
                 </article>
