@@ -19,6 +19,13 @@
     line-height: 24px;
 }
 
+.itens-list article p.deaths {
+    font-size: 16px;
+    color: #ee316b;
+    margin-top: 5px;
+    line-height: 24px;
+}
+
 .itens-list article a{
     height: 42px;
     border-radius: 10px;

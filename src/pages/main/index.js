@@ -14,7 +14,7 @@ export default class Main extends Component {
 
     loadData = async () => {
         const response = await api.get('/api/report/v1')
-        console.log(response.data.data)
+        //console.log(response.data.data)
 
         this.setState({datauf: response.data.data})
     }
@@ -26,10 +26,12 @@ export default class Main extends Component {
                 {this.state.datauf.map(item => (
                 
                 <article key={item.uid}>
-                    <strong>{item.uf}</strong>
-                    <p>{item.state}</p>
+                    <strong>{item.state}</strong>
+                    <p>{item.uf}</p>
+                    <p>Casos confirmados: {item.cases}</p>
+                    <p class="deaths">Mortes: {item.deaths}</p>
                     
-                    <Link to="">Mostrar</Link>
+                    <Link to={`/states/${item.uf}`}>Mais dados</Link>
 
 
                 </article>
