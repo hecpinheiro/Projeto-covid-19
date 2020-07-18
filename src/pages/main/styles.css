@@ -29,10 +29,10 @@
 .itens-list article a{
     height: 42px;
     border-radius: 10px;
-    border: 2px solid #38d7e7;
+    border: 2px solid #842d72;
     background: none;
     margin-top: 10px;
-    color: #38d7e7;
+    color: #842d72;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
@@ -43,6 +43,6 @@
 }
 
 .itens-list article a:hover{
-    background: #38d7e7;
+    background: #842d72;
     color: #fff;
 }

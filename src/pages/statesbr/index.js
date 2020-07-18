@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import api from '../../services/api'
+import "./styles.css"
 
 export default class Statesbr extends Component {
     state = {
@@ -21,6 +22,9 @@ export default class Statesbr extends Component {
         return(
             <div className="states-info">
                 <h1>{datauf.state}</h1>
+                <p>Casos confirmados: {datauf.cases}</p>
+                <p class="deaths">Mortes: {datauf.deaths}</p>
+                <p>Atualizado em {datauf.datetime}</p>
             </div>
         ) 
     }

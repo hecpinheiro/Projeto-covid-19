@@ -26,8 +26,8 @@ export default class Main extends Component {
                 {this.state.datauf.map(item => (
                 
                 <article key={item.uid}>
-                    <strong>{item.state}</strong>
-                    <p>{item.uf}</p>
+                    <strong>{item.uf}</strong>
+                    
                     <p>Casos confirmados: {item.cases}</p>
                     <p class="deaths">Mortes: {item.deaths}</p>
                     
