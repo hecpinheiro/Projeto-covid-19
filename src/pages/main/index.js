@@ -13,10 +13,10 @@ export default class Main extends Component {
     }
 
     loadData = async () => {
-        const response = await api.get('/api/report/v1')
-        //console.log(response.data.data)
+        const response = await api.get('?is_last=True&place_type=state')
+        console.log(response.data.results)
 
-        this.setState({datauf: response.data.data})
+        this.setState({datauf: response.data.results})
     }
     
     
@@ -25,13 +25,13 @@ export default class Main extends Component {
             <div className = "itens-list">
                 {this.state.datauf.map(item => (
                 
-                <article key={item.uid}>
-                    <strong>{item.uf}</strong>
+                <article key={item.city_ibge_code}>
+                    <strong>{item.state}</strong>
                     
-                    <p>Casos confirmados: {item.cases}</p>
-                    <p class="deaths">Mortes: {item.deaths}</p>
+                    <p>Casos confirmados: {item.confirmed}</p>
+                    <p className="deaths">Mortes: {item.deaths}</p>
                     
-                    <Link to={`/states/${item.uf}`}>Mais dados</Link>
+                    <Link to={`/states/${item.state}`}>Mais dados</Link>
 
 
                 </article>

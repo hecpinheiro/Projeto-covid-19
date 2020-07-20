@@ -6,47 +6,36 @@ import {XYPlot, LineSeries} from 'react-vis';
 
 export default class Statesbr extends Component {
     state = {
-        datauf:{}
+        datauf:[]
     };
 
     async componentDidMount() {
         const {id} = this.props.match.params
 
-        const response = await api.get(`/api/report/v1/brazil/uf/${id}`)
-        
-        this.setState({datauf: response.data})
+        const response = await api.get(`?is_last=True&state=${id}`)
+        console.log(response)
+        this.setState({datauf: response.data.results})
     
     }
     
     render() {
-        const {datauf} = this.state
-
-        const data = [
-            {x: 0, y: 8},
-            {x: 1, y: 8},
-            {x: 2, y: 8},
-            {x: 3, y: 8},
-            {x: 4, y: 8},
-            {x: 5, y: 8},
-            {x: 6, y: 6},
-            {x: 7, y: 3},
-            {x: 8, y: 2},
-            {x: 9, y: 0}
-          ]
-
+        
         return(
             <div className="states-info">
-                <h1>{datauf.state}</h1>
-                <p>Casos confirmados: {datauf.cases}</p>
-                <p class="deaths">Mortes: {datauf.deaths}</p>
-                <p>Atualizado em {datauf.datetime}</p>
+                {this.state.datauf.map(item =>(
 
-                <XYPlot height={300} width={300}>
-                <LineSeries data={data} />
-                </XYPlot>
+                   <article key={item.city_ibge_code}> 
+                        <h1>{item.city}</h1>
+                        <p>Casos confirmados: {item.confirmed}</p>
+                        <p class="deaths">Mortes: {item.deaths}</p>
+                        <p>Atualizado em {item.date}</p>
+                    </article>
+                )
+                )
+                }
+
             </div>
-
-            
+  
         ) 
     }
 }
