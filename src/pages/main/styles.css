@@ -1,13 +1,14 @@
 .itens-list {
-    max-width: 700px;
+    max-width: 500px;
     margin: 20px auto 0;
     padding: 0 20px;
+
 }
 
 .itens-list article {
-    background: #fff;
+    background: #f7f7f7;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -26,9 +27,9 @@
     line-height: 24px;
 }
 
-.itens-list article a{
-    height: 42px;
-    border-radius: 10px;
+.itens-list article a {
+    height: 32px;
+    border-radius: 50px;
     border: 2px solid #842d72;
     background: none;
     margin-top: 10px;
@@ -42,7 +43,7 @@
     transition: all 0.2s;
 }
 
-.itens-list article a:hover{
+.itens-list article a:hover {
     background: #842d72;
     color: #fff;
 }
